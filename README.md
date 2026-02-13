@@ -1,5 +1,7 @@
 # Medic — Pyzotero Voorbeeldproject
 
+[![CI](https://github.com/acidjunk/medic/actions/workflows/ci.yml/badge.svg)](https://github.com/acidjunk/medic/actions/workflows/ci.yml)
+
 Een klein Python-project dat de belangrijkste functionaliteit van
 [pyzotero](https://pyzotero.readthedocs.io/en/latest/) demonstreert.
 Pyzotero is een Python-wrapper rond de [Zotero Web API v3](https://www.zotero.org/support/dev/web_api/v3/start)
