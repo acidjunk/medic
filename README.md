@@ -8,6 +8,7 @@ waarmee je je Zotero-bibliotheek kunt lezen, doorzoeken en beheren vanuit Python
 ## Vereisten
 
 - Python 3.10+
+- [uv](https://docs.astral.sh/uv/) (aanbevolen) of pip
 - Een [Zotero](https://www.zotero.org/) account
 - Een Zotero API-key (zie [Configuratie](#configuratie))
 
@@ -15,16 +16,16 @@ waarmee je je Zotero-bibliotheek kunt lezen, doorzoeken en beheren vanuit Python
 
 ```bash
 # Clone het project
-git clone <repo-url>
+git clone https://github.com/acidjunk/medic.git
 cd medic
 
-# Activeer de bestaande virtual environment
-source .venv/bin/activate
+# Met uv (aanbevolen)
+uv sync
 
-# Of maak een nieuwe venv aan
+# Of met pip
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install .
 ```
 
 ## Configuratie
@@ -64,6 +65,10 @@ Het groeps-ID vind je in de URL van de groepspagina op zotero.org
 ## Gebruik
 
 ```bash
+# Met uv
+uv run python examples.py
+
+# Of met geactiveerde venv
 source .venv/bin/activate
 python examples.py
 ```
@@ -190,8 +195,9 @@ medic/
 ├── .env.example      # Template voor credentials
 ├── .env              # Jouw credentials (niet in git)
 ├── .gitignore
-├── .venv/            # Virtual environment
-├── requirements.txt  # Python dependencies
+├── LICENSE           # Apache License 2.0
+├── pyproject.toml    # Project configuratie en dependencies
+├── uv.lock           # Lockfile voor reproduceerbare installaties
 ├── examples.py       # Alle voorbeeldcode
 └── README.md
 ```
