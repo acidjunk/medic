@@ -81,7 +81,9 @@ def voorbeeld_item_aanmaken():
         {"creatorType": "author", "firstName": "Jan", "lastName": "Jansen"}
     ]
     template["date"] = "2025"
-    template["abstractNote"] = "Dit item is aangemaakt via het pyzotero voorbeeld-script."
+    template["abstractNote"] = (
+        "Dit item is aangemaakt via het pyzotero voorbeeld-script."
+    )
 
     resp = zot.create_items([template])
     if resp["success"]:

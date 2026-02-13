@@ -116,7 +116,9 @@ def test_zoeken(mock_zotero, capsys):
     results = examples.voorbeeld_zoeken("test")
 
     assert len(results) == 2
-    mock_zotero.add_parameters.assert_called_once_with(q="test", qmode="titleCreatorYear")
+    mock_zotero.add_parameters.assert_called_once_with(
+        q="test", qmode="titleCreatorYear"
+    )
     mock_zotero.top.assert_called_once_with(limit=10)
 
     output = capsys.readouterr().out
