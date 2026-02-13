@@ -1,0 +1,13 @@
+[project]
+name = "medic"
+version = "0.1.0"
+description = "Pyzotero voorbeeldproject — laat de belangrijkste functionaliteit van pyzotero zien"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [
+    { name = "acidjunk" },
+]
+dependencies = [
+    "pyzotero",
+    "python-dotenv",
+]
