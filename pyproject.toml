@@ -11,3 +11,8 @@ dependencies = [
     "pyzotero",
     "python-dotenv",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
